@@ -1,7 +1,7 @@
 # Final aseguramiento - práctica
 ## Técnicas a lo largo del tiempo
 - Debugging
-- Demostration
+- Demonstration
 - Destruction
 - Evaluation
 - Prevention
