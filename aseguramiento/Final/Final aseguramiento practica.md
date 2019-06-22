@@ -25,6 +25,15 @@ Otras formas de testing:
 
 No hacer tests de caja blanca que requieren conocer la implementación del método para poder testear
 
+### Ritmo al desarrollar siguiendo los principios de TDD
+> 1. Quickly add a test
+> 2. Run all tests and see the new one fail
+> 3. Make a little change
+> 4. Run all tests and see them all succeed
+> 5. Refactor to remove duplication  
+>
+>\- Kent Beck | Test-Driven Development by example
+
 ### Nombre
 - **Test001_**
 - **ASpeedValue** -> sujeto
