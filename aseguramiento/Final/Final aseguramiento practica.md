@@ -146,7 +146,7 @@ Borrar el servicio viejo y empieza uno nuevo.
 # Pull core image
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS publish
 
-# Env variables
+# Define la variable de entorno DB_SERVER con localhost como su valor default
 ENV DB_SERVER localhost
 
 # Install git, clone the repository and compile the project
@@ -159,16 +159,21 @@ RUN \
 # Pull runtime image  
 FROM mcr.microsoft.com/dotnet/core/runtime:2.2
 
+# Directorio de trabajo al iniciar el container
 WORKDIR /app
 
-# Puerto expuesto. Lo mapeo a un puerto del host
+# Puerto expuesto
 EXPOSE 1234
 
+# Copia el directorio /app de la imagen base a la nueva imagen
 COPY --from=publish /app .
 
-# Que proceso ejecutar cuando empieza el container
+# Comando a ejecutar cuando empieza el container
 ENTRYPOINT dotnet acs.dll $DB_SERVER
 ```
+La imagen `core` no es necesaria cuando el proyecto ya está compilado, por lo que utilizamos únicamente el `runtime` (ya que pesa mucho menos).
+
+Referencia de Dockerfile https://docs.docker.com/engine/reference/builder/
 
 Todos los containers de un docker compose corren en un mismo nodo.
 
