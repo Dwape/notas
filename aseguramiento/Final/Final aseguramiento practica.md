@@ -29,7 +29,7 @@ No hacer tests de caja blanca que requieren conocer la implementación del méto
 
 **Black-box testing**: el test se basa en la funcionalidad deseada de la implementación es decir, su especificación o requerimientos.
 
-### Ritmo al desarrollar siguiendo los principios de TDD
+### Pasos a seguir al desarrollar siguiendo los principios de TDD
 > 1. Quickly add a test
 > 2. Run all tests and see the new one fail
 > 3. Make a little change
