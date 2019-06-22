@@ -2,7 +2,7 @@
 ## Técnicas a lo largo del tiempo
 - Debugging
 - Demostration
-- Destruvtion
+- Destruction
 - Evaluation
 - Prevention
 
@@ -21,9 +21,9 @@ Otras formas de testing:
 - Test de integración: antes del deploy -> testear con el sistema real
 - Simulador: durante el desarrollo -> los test tienen que ser rápidos.
 
-**Importnte**: Los tests deben testear que es lo que hace no como lo hace
+**Importante**: Los tests deben testear qué es lo que hace no cómo lo hace
 
-No hacer tests de caja blanca que requieren conocer la implementación del método para poder testeard
+No hacer tests de caja blanca que requieren conocer la implementación del método para poder testear
 
 ### Nombre
 - **Test001_**
@@ -31,12 +31,12 @@ No hacer tests de caja blanca que requieren conocer la implementación del méto
 - **When**
 - **IncreasePercent** -> estímulo
 - **Should**
-- **UpdateValue()** -> Situacion final (resultado)
+- **UpdateValue()** -> Situación final (resultado)
 
 ### Dependencias
 Inyectamos las dependencias. La dependencia debería estar explicita.
 
-Encapsulamos compotamiento externo -> podemos hacer objectos que simulan el real. Tenemos control sobre cada situación posible que queramos testear.
+Encapsulamos comportamiento externo -> podemos hacer objectos que simulan el real. Tenemos control sobre cada situación posible que queramos testear.
 
 Colaborador interno -> lo conoce siempre
 
@@ -67,7 +67,7 @@ Define el backbone del proyecto. Narramos la historia del sistema -> Map the Big
 - Definir objectivos
 - Armar un resumen ejecutivo -> definir what, who y what
 
-**Dev team task breakout**: dividir user stories en tasks. Las tasks estan asignadas a un desarrolador -> estimar cuanto tiempo van a tomar las tasks.
+**Dev team task breakout**: dividir user stories en tasks. Las tasks estan asignadas a un desarrollador -> estimar cuanto tiempo van a tomar las tasks.
 
 UAT: user acceptance test. Proceso para verificar que la solución funciona para el usuario.
 
@@ -183,7 +183,7 @@ Todos los containers de un docker compose corren en un mismo nodo.
 ---
 ## Continuos Integration
 Integrar el código de manera constante.  
-Anta cada commit correr jobs automáticos que validan la "salud" del código.
+Ante cada commit correr jobs automáticos que validan la "salud" del código.
 
 ### Jenkins
 https://jenkins.io/doc/
@@ -193,7 +193,7 @@ https://jenkins.io/doc/
 https://jenkins.io/doc/pipeline/tour/hello-world/
 >Jenkins Pipeline (or simply "Pipeline") is a suite of plugins which supports implementing and integrating continuous delivery pipelines into Jenkins.  
 A continuous delivery pipeline is an automated expression of your process for getting software from version control right through to your users and customers.  
-Jenkins Pipeline provides an extensible set of tools for modeling simple-to-complex delivery pipelines "as code". The definition of a Jenkins Pipeline is typically written into a text file (called a Jenkinsfile) which in turn is checked into a project’s source control repositor
+Jenkins Pipeline provides an extensible set of tools for modeling simple-to-complex delivery pipelines "as code". The definition of a Jenkins Pipeline is typically written into a text file (called a Jenkinsfile) which in turn is checked into a project’s source control repository
 
 ### Circle-ci
 
@@ -213,7 +213,7 @@ https://www.spinnaker.io/concepts/
 
 **Application Manager**
 >You use Spinnaker’s application deployment features to construct and manage continuous delivery workflows.
-- Pipeline: secuencia de acciones (stages). Puede ser ejecutada automaticamente con un evento (new docker image, jenkins job completing)
+- Pipeline: secuencia de acciones (stages). Puede ser ejecutada automáticamente con un evento (new docker image, jenkins job completing)
 - Stage: atomic building block (Deploy, Resize, Disable, Manual Judgment, etc..)
 - Deployment strategies
 
@@ -222,7 +222,7 @@ https://www.spinnaker.io/concepts/
 
 ## Regression test
 https://en.wikipedia.org/wiki/Regression_testing
->Regression testing is re-running functional and non-functional tests to ensure that previously developed and tested software still performs after a change.If not, that would be called a regression. Changes that may require regression testing include bug fixes, software enhancements, configuration changes, and even substitution of electronic components
+>Regression testing is re-running functional and non-functional tests to ensure that previously developed and tested software still performs after a change. If not, that would be called a regression. Changes that may require regression testing include bug fixes, software enhancements, configuration changes, and even substitution of electronic components
 
 ---
 ## Locust
@@ -304,9 +304,9 @@ https://deviq.com/repository-pattern/
 ---
 ## Código Legacy
 1. Obtener suite de test del código viejo. Si no esta, armarlo
-2. Empezar a construir módulos del código legacy.
+2. Empezar a construir módulos del código legacy
 3. Hacer el facade
 4. Ahora el código interactua con el facade y el facade con el código legacy
    
-![](2019-06-22-16-16-44.png)
-Aislo lo que quiero arreglar para no tomper el resto (para eso usamos el facade)
+![](2019-06-22-16-16-44.png)  
+Aislo lo que quiero arreglar para no romper el resto (para eso usamos el facade)
