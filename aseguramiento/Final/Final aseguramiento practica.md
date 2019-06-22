@@ -25,6 +25,10 @@ Otras formas de testing:
 
 No hacer tests de caja blanca que requieren conocer la implementación del método para poder testear
 
+**White-box testing**: el test se basa en la estructura del código terminado.
+
+**Black-box testing**: el test se basa en la funcionalidad deseada de la implementación es decir, su especificación o requerimientos.
+
 ### Ritmo al desarrollar siguiendo los principios de TDD
 > 1. Quickly add a test
 > 2. Run all tests and see the new one fail
